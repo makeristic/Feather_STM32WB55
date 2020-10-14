@@ -12,6 +12,13 @@ I recently discovered the STM32WB series of microcontrollers which include Bluet
 
 The ultimate goal is to get this board working and running [CircuitPython](https://circuitpython.org/), once working I may do another revision with a focus on enabling more of the low power features of the STM32WB series.
 
+## Features
+
+* [STM32WB55CGU6](https://www.st.com/en/microcontrollers-microprocessors/stm32wb55cg.html) microcontroller
+* Adafruit Feather compatible, with USB-C
+* (Optional) QSPI-Dual flash module can be soldered to the back
+* (Optional) ARM SWD 10-pin debug connector can be soldered on the back
+
 ## Schematic
 
 ![Schematic](images/schematic.png)
