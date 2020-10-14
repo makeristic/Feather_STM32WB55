@@ -10,16 +10,23 @@ I have several (Adafruit Feather)[https://www.adafruit.com/category/943] boards,
 
 I recently discovered the STM32WB series of microcontrollers which include Bluetooth connectivity and decided to build my own development board around it.  This repository is my first attempt at designing it and builds upon the great work of several sources (see Acknowledgements below).
 
+The ultimate goal is to get this board working and running [CircuitPython](https://circuitpython.org/), once working I may do another revision with a focus on enabling more of the low power features of the STM32WB series.
+
 ## Schematic
 
-![GitHub Logo](images/schematic.png)
+![Schematic](images/schematic.png)
 
 ## PCB
 
-![GitHub Logo](images/pcb1.png)
+![PCB with inner layers](images/pcb1.png)
 
-![GitHub Logo](images/pcb2.png)
+![PCB without inner layers](images/pcb2.png)
 
+## 3D Render
+
+![3D Front](images/3d-front.png)
+
+![3D Back](images/3d-back.png)
 
 ## TODO
 
