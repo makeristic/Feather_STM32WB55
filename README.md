@@ -21,7 +21,7 @@ The ultimate goal is to get this board working and running [CircuitPython](https
 
 ## Notes
 
-* 4-layer board, 1mm thick with impedence control, and assumes the standard JLCPCB stackup.
+* 4-layer board, 1mm thick with impedence controlled traces, and assumes the standard JLCPCB stackup.
 * I've tried to standardise on 0.2mm tracks for signals, 0.3mm tracks for power.  VBUS and +BATT do have high-current tracks/pours to their respective pins to allow for powering things off-board like Neopixels.
 * STMicroelectronics produce a custom matching network for this microcontroller [MLPF-WB55-01E3](https://www.st.com/en/emi-filtering-and-signal-conditioning/mlpf-wb55-01e3.html), the recommended PCB layout has been implemented here.
 * The [Fractus Antenna](https://fractusantennas.com/compact-reach-xtend-nn01-102/) has a recommended layout which is implemented here.  The clearance area essentially takes up the entire tip of the board, though I have cheekily added the STEMMA QT connector, figuring it shouldn't have too big an impact.
