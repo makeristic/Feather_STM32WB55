@@ -46,9 +46,7 @@ The ultimate goal is to get this board working and running [CircuitPython](https
 
 ## TODO
 
-* Create footprints for the smaller WS2812B-mini 3.5x3.5mm Neopixel
-* Create footprints for the [Fractus Antenna](https://fractusantennas.com/compact-reach-xtend-nn01-102/)
-* Do I need a matching network?  STM sell a ready-made part
+* Improve the layout, potentially reassigning GPIO pins to simplify the traces
 
 ## Acknowledgements
 
