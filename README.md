@@ -19,6 +19,12 @@ The ultimate goal is to get this board working and running [CircuitPython](https
 * (Optional) QSPI-Dual flash module can be soldered to the back
 * (Optional) ARM SWD 10-pin debug connector can be soldered on the back
 
+## Notes
+
+* STMicroelectronics produce a custom matching network for this chip [MLPF-WB55-01E3](https://www.st.com/en/emi-filtering-and-signal-conditioning/mlpf-wb55-01e3.html), the recommended PCB layout has been implemented here.
+* The [Fractus Antenna](https://fractusantennas.com/compact-reach-xtend-nn01-102/) has a recommended layout which is implemented here.  The clearance area essentially takes up the entire tip of the board, though I have cheekily added the STEMMA QT connector, figuring it shouldn't have too big an impact.
+* There is a lot of space around the center of the board, this is semi-intentional so I can extend the design with sensors, or an additional button.
+
 ## Schematic
 
 ![Schematic](images/schematic.png)
@@ -39,7 +45,7 @@ The ultimate goal is to get this board working and running [CircuitPython](https
 
 * Create footprints for the smaller WS2812B-mini 3.5x3.5mm Neopixel
 * Create footprints for the [Fractus Antenna](https://fractusantennas.com/compact-reach-xtend-nn01-102/)
-* Do I need a matching network?  STM sell a ready-made part [MLPF-WB55-01E3](https://www.st.com/en/emi-filtering-and-signal-conditioning/mlpf-wb55-01e3.html)
+* Do I need a matching network?  STM sell a ready-made part
 
 ## Acknowledgements
 
