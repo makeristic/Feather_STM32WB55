@@ -26,6 +26,7 @@ The ultimate goal is to get this board working and running [CircuitPython](https
 * STMicroelectronics produce a custom matching network for this microcontroller [MLPF-WB55-01E3](https://www.st.com/en/emi-filtering-and-signal-conditioning/mlpf-wb55-01e3.html), the recommended PCB layout has been implemented here.
 * The [Fractus Antenna](https://fractusantennas.com/compact-reach-xtend-nn01-102/) has a recommended layout which is implemented here.  The clearance area essentially takes up the entire tip of the board, though I have cheekily added the STEMMA QT connector, figuring it shouldn't have too big an impact.
 * There is a lot of space around the center of the board, this is semi-intentional so I can extend the design with sensors, or an additional button.
+* You can find my custom footprints etc. here [Makeristic-KiCad-Library](https://github.com/makeristic/Makeristic-KiCad-Library)
 
 ## Schematic
 
