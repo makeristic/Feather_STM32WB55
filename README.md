@@ -6,7 +6,7 @@ This is a work in progress, it may not work at all.  :)
 
 ## Overview
 
-I have several (Adafruit Feather)[https://www.adafruit.com/category/943] boards, and Adafruit handily publish the (Feather Specification)[https://learn.adafruit.com/adafruit-feather/feather-specification] here to make your own.  
+I have several [Adafruit Feather](https://www.adafruit.com/category/943) boards, and Adafruit handily publish the [Feather Specification](https://learn.adafruit.com/adafruit-feather/feather-specification) here to make your own.  
 
 I recently discovered the STM32WB series of microcontrollers which include Bluetooth connectivity and decided to build my own development board around it.  This repository is my first attempt at designing it and builds upon the great work of several sources (see Acknowledgements below).
 
