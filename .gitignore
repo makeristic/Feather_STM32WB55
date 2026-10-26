@@ -1,4 +1,8 @@
 /fp-info-cache
 *.sch-bak
 *.kicad_pcb-bak
-Feather_STM32WB55-cache.lib
+*.bak
+*.kicad_prl
+*-backups/
+_autosave-*
+~*.lck

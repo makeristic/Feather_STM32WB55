@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name IC_STMicroelectronics_STM32WB55CGU6)(type KiCad)(uri ${KIPRJMOD}/libraries/IC_STMicroelectronics_STM32WB55CGU6.pretty)(options "")(descr "Original placed footprint recovered from PCB"))
+  (lib (name OPL_Switch)(type KiCad)(uri ${KIPRJMOD}/libraries/OPL_Switch.pretty)(options "")(descr "Original placed footprint recovered from PCB"))
+  (lib (name Makeristic-KiCad-Library)(type KiCad)(uri ${KIPRJMOD}/../Makeristic-KiCad-Library/Makeristic-KiCad-Library.pretty)(options "")(descr "Makeristic sibling checkout"))
+)

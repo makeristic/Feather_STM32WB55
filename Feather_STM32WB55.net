@@ -374,7 +374,7 @@
       (tstamp 5F8D46F7))
     (comp (ref ANT1)
       (value NN01-102)
-      (footprint FR05S1N0102)
+      (footprint Makeristic-KiCad-Library:FR05S1N0102)
       (datasheet https://www.fractusantennas.com/files/UM_FR05_S1_N_0_102.pdf)
       (fields
         (field (name Description) "Compact Reach XtendTM (FR05-S1-N-0-102)  Bluetooth, Zigbee, 802.11 b/g/n WLAN")
@@ -388,7 +388,7 @@
       (tstamp 5F88C002))
     (comp (ref FL1)
       (value MLPF-WB55-01E3)
-      (footprint MLPFWB5501E3)
+      (footprint Makeristic-KiCad-Library:MLPFWB5501E3)
       (datasheet https://www.st.com/resource/en/datasheet/mlpf-wb55-01e3.pdf)
       (fields
         (field (name "Arrow Part Number") MLPF-WB55-01E3)
