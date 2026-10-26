@@ -10,7 +10,7 @@ The README identifies the board, links actual design, BOM, CubeMX and fabricatio
 - [x] Expand the README, scope MIT to original work, add licence text, and extend editor ignore rules (completed: 2026-10-26).
 - [x] Set and verify GitHub description and topics (completed: 2026-10-26).
 - [x] Check local Markdown links, ignore rules, whitespace, and the complete diff (completed: 2026-10-26; 16 local links resolve, design sources and exports unchanged).
-- [ ] Commit, push, and open a PR.
+- [x] Commit, push, and open [PR #1](https://github.com/makeristic/Feather_STM32WB55/pull/1) (completed: 2026-10-26).
 
 ## Findings and limits
 
