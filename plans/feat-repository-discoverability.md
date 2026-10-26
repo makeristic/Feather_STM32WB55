@@ -25,3 +25,8 @@ The authorised follow-up extends this PR to source-level corrections supported b
 - [x] Verify relevant package/pin and power-interface assumptions against primary manufacturer sources (completed: 2026-10-27).
 - [x] Apply and verify minimal supported corrections; record unresolved circuit and manufacturing work in `docs/code-audit-report.md` (completed: 2026-10-27).
 - [x] Update README/PR scope, review the complete diff, commit, push, and return for root review before merge (completed: 2026-10-27; same PR #1, no merge performed by this agent).
+
+## Independent validation follow-up
+
+- [x] Reproduce globally registered legacy-library export omitting USB shield J5.S1 in nightly 10.99.0; confirm exact 213-pin graph equality with a new empty global configuration and the committed cache (completed: 2026-10-27).
+- [x] Scope README, audit and PR validation claims to their actual library-resolution modes; preserve source geometry and document the apparent nightly inconsistency (completed: 2026-10-27).

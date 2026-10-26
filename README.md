@@ -48,6 +48,8 @@ The ultimate goal is to get this board working and running [CircuitPython](https
 3. Resolve library warnings before editing. ANT1 and FL1 now have qualified Makeristic footprint identifiers, and their 3D-model paths plus the STM32 model path resolve through the sibling checkout. The [library notes](libraries/README.md) describe the recovery and its limits; restored assets have not been independently redesigned or electrically verified.
 4. Review the RF layout, power path, stackup, and design-rule results before fabrication. Refill zones after source edits, then regenerate exports only after resolving the [audit findings](docs/code-audit-report.md). Existing images and fabrication files remain historical snapshots.
 
+Nightly KiCad netlist checks need the [audit's cache-only export procedure](docs/code-audit-report.md): globally resolving the legacy USB symbol in nightly 10.99.0 omitted its shield pin from the export. No symbol/wiring workaround or bulk format migration was applied.
+
 CircuitPython support remains the original project goal. No application firmware, flashing guide, or electrical/RF test report is included, and successful operation is not established by the files in this repository.
 
 ## Schematic

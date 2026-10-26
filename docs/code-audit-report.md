@@ -28,16 +28,24 @@ The QSPI flash circuit connects only IO0/IO1 and straps WP/HOLD high, consistent
 
 ## Verification
 
-Fresh schematic export succeeds with the restored cache. Its complete pin-connectivity graph matches the stored netlist across **213 pins** after ignoring generated net-name spelling changes. All 45 schematic components have matching PCB references, values, footprints, and pad-net assignments; board-only mounting holes and graphics are excluded from that component comparison. Both recovered symbol libraries load through the CLI, and both recovered footprint libraries successfully export to SVG.
+Fresh schematic export succeeds with the restored cache and **no globally registered symbol libraries**. In that mode its complete pin-connectivity graph matches the stored netlist across **213 pins**, including USB shield J5.S1 on GND, after ignoring generated net-name spelling changes. No pin mappings are excluded. All 45 schematic components have matching PCB references, values, footprints, and pad-net assignments; board-only mounting holes and graphics are excluded from that component comparison. Both recovered symbol libraries load through the CLI, and both recovered footprint libraries successfully export to SVG.
+
+**Nightly library-resolution caveat:** with the same historical `Connector.lib` registered globally, nightly 10.99.0's export omits J5.S1 and contains 212 pins. All shared-pin topology otherwise agrees. The same behaviour reproduces in the STUSB4500 project, whose cache and global symbol define identical shield geometry and whose SVGs show the shield and ground wire meeting in both modes. This appears to be a nightly legacy import/export inconsistency; no speculative symbol or wiring workaround was applied. Complete graph equality is established only for the cache-only mode, not the globally resolved export.
 
 With isolated tables for historical symbols, installed modern footprints and project libraries, ERC reports **58 findings**: 48 unspecified-pin pairings, 3 undriven input expectations, 4 supply-drive declarations, and 3 multiple-net-name warnings. The orphan label/no-connect findings are gone.
 
 Final refilled DRC in that configured environment reports **280 findings**, **0 shorts**, and **0 unconnected items**: 48 clearance, 32 copper/edge, 9 hole-clearance, 46 modern-library footprint differences, 116 solder-mask bridges, 8 courtyard overlaps, 4 incomplete thermal connections, and 17 other courtyard/text/silkscreen findings. The counts differ from the controlled short-fix comparison because library configuration and historical project-context loading affect the rule report. Legacy zone conversion is explicitly warned by nightly KiCad; no errors or exclusions were suppressed.
 
-Representative commands, run on temporary copies:
+Use an explicitly empty global configuration for the matching netlist export, keeping the committed cache beside the schematic:
 
 ```sh
-kicad-cli-nightly sch export netlist --output /tmp/feather.net Feather_STM32WB55.sch
+makeristic_audit_config=$(mktemp -d)
+XDG_CONFIG_HOME="$makeristic_audit_config" kicad-cli-nightly sch export netlist --output /tmp/feather.net Feather_STM32WB55.sch
+```
+
+ERC/DRC used a separate temporary configuration containing historical symbol libraries, installed footprint libraries, and custom dependencies. These are rule checks rather than proof of complete netlist parity. Representative commands in that configured environment:
+
+```sh
 kicad-cli-nightly sch erc --format json --severity-all --exit-code-violations --output /tmp/feather-erc.json Feather_STM32WB55.sch
 kicad-cli-nightly pcb drc --format json --severity-all --refill-zones --exit-code-violations --output /tmp/feather-drc.json Feather_STM32WB55.kicad_pcb
 ```
