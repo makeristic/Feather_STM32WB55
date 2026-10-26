@@ -1203,7 +1203,6 @@ F 3 "" H 10200 1800 50  0001 C CNN
 $EndComp
 Text GLabel 9900 1500 0    50   Input ~ 0
 D8_NEOPIXEL
-NoConn ~ 8700 350 
 Text GLabel 9000 1150 1    50   Input ~ 0
 D13
 $Comp
@@ -1651,7 +1650,7 @@ U 1 1 5F88C002
 P 5750 3700
 F 0 "ANT1" V 6088 3472 50  0000 R CNN
 F 1 "NN01-102" V 5997 3472 50  0000 R CNN
-F 2 "FR05S1N0102" H 6400 3800 50  0001 L CNN
+F 2 "Makeristic-KiCad-Library:FR05S1N0102" H 6400 3800 50  0001 L CNN
 F 3 "https://www.fractusantennas.com/files/UM_FR05_S1_N_0_102.pdf" H 6400 3700 50  0001 L CNN
 F 4 "Compact Reach XtendTM (FR05-S1-N-0-102)  Bluetooth, Zigbee, 802.11 b/g/n WLAN" H 6400 3600 50  0001 L CNN "Description"
 F 5 "2.2" H 6400 3500 50  0001 L CNN "Height"
@@ -1664,14 +1663,13 @@ F 11 "https://www.mouser.co.uk/ProductDetail/Fractus-Antennas/FR05-S1-N-0-102?qs
 	1    5750 3700
 	0    -1   -1   0   
 $EndComp
-NoConn ~ 5650 3250
 $Comp
 L Makeristic-KiCad-Library:MLPF-WB55-01E3 FL1
 U 1 1 5F8AD603
 P 5250 4150
 F 0 "FL1" H 5800 4415 50  0000 C CNN
 F 1 "MLPF-WB55-01E3" H 5800 4324 50  0000 C CNN
-F 2 "MLPFWB5501E3" H 6200 4250 50  0001 L CNN
+F 2 "Makeristic-KiCad-Library:MLPFWB5501E3" H 6200 4250 50  0001 L CNN
 F 3 "https://www.st.com/resource/en/datasheet/mlpf-wb55-01e3.pdf" H 6200 4150 50  0001 L CNN
 F 4 "RF Wireless Misc 2.4 GHz Low Pass Filter matched to STM32WB55" H 6200 4050 50  0001 L CNN "Description"
 F 5 "0.7" H 6200 3950 50  0001 L CNN "Height"
@@ -1689,8 +1687,6 @@ GND
 Text GLabel 6350 4250 2    50   Input ~ 0
 GND
 Text GLabel 6350 4150 2    50   Input ~ 0
-GND
-Text GLabel 4850 4700 0    50   Input ~ 0
 GND
 NoConn ~ 5850 3700
 Text GLabel 5250 4250 0    50   Input ~ 0

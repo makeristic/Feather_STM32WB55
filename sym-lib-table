@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name IC_STMicroelectronics_STM32WB55CGU6)(type Legacy)(uri ${KIPRJMOD}/libraries/IC_STMicroelectronics_STM32WB55CGU6.lib)(options "")(descr "Exact original symbol recovered from project history"))
+  (lib (name OPL_Switch)(type Legacy)(uri ${KIPRJMOD}/libraries/OPL_Switch.lib)(options "")(descr "Exact original switch symbol recovered from project history"))
+  (lib (name Makeristic-KiCad-Library)(type Legacy)(uri ${KIPRJMOD}/../Makeristic-KiCad-Library/Makeristic-KiCad-Library.lib)(options "")(descr "Makeristic sibling checkout"))
+)

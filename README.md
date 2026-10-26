@@ -6,6 +6,8 @@ A KiCad design for an STM32WB55CGU6 Bluetooth development board in the Adafruit 
 
 This is a work in progress, it may not work at all.  :)
 
+**Do not order the included fabrication files as a manufacturing release.** The [source audit](docs/code-audit-report.md) corrected a D10-to-ground short in the PCB source; the historical Gerbers and drill files still predate that fix. Layout, footprint, stackup, and electrical/RF review remain necessary before regenerating a complete fabrication set.
+
 ## Overview
 
 I have several [Adafruit Feather](https://www.adafruit.com/category/943) boards, and Adafruit handily publish the [Feather Specification](https://learn.adafruit.com/adafruit-feather/feather-specification) here to make your own.  
@@ -37,13 +39,14 @@ The ultimate goal is to get this board working and running [CircuitPython](https
 * [Gerber and drill exports](gerber/), including both inner copper layers.
 * [STM32CubeMX configuration](cubemx/cubemx.ioc). This is configuration input, not a complete firmware application or a CircuitPython port.
 * [Vendor datasheets and layout references](datasheets/) and [design images](images/).
+* [Recovered STM32/switch libraries](libraries/), [historical symbol cache](Feather_STM32WB55-cache.lib), and project [symbol](sym-lib-table)/[footprint](fp-lib-table) tables.
 
 ## Open or modify the design
 
 1. Clone the repository and open `Feather_STM32WB55.pro` in KiCad. The PCB records KiCad **5.1.7**; the `.pro` and `.sch` files are legacy formats. Import into a copy if using a newer KiCad release.
-2. Install the KiCad standard libraries and the linked Makeristic library. The schematic also references the external symbol/footprint library `IC_STMicroelectronics_STM32WB55CGU6`, which is not included here. There are no project library tables or schematic cache library in this checkout, so it is not a self-contained library setup.
-3. Resolve symbol and footprint assignments before editing. Some 3D models use relative filenames, including `FR05-S1-N-0-102.stp` and `MLPF-WB55-01E3.stp`; locate the matching files in the Makeristic library and configure their paths locally.
-4. Review the RF layout, power path, stackup, and design-rule results before fabrication. Treat the committed Gerbers as historical exports; this documentation update does not regenerate or validate them.
+2. Install the corresponding KiCad standard libraries and clone the Makeristic library alongside this repository. The project tables resolve that sibling checkout and the recovered board-local STM32/switch libraries. Keep the committed cache with the schematic so historical symbols remain available.
+3. Resolve library warnings before editing. ANT1 and FL1 now have qualified Makeristic footprint identifiers, and their 3D-model paths plus the STM32 model path resolve through the sibling checkout. The [library notes](libraries/README.md) describe the recovery and its limits; restored assets have not been independently redesigned or electrically verified.
+4. Review the RF layout, power path, stackup, and design-rule results before fabrication. Refill zones after source edits, then regenerate exports only after resolving the [audit findings](docs/code-audit-report.md). Existing images and fabrication files remain historical snapshots.
 
 CircuitPython support remains the original project goal. No application firmware, flashing guide, or electrical/RF test report is included, and successful operation is not established by the files in this repository.
 
@@ -80,4 +83,4 @@ Related projects: [Feather USB-C template](https://github.com/makeristic/Adafrui
 
 ## Licence
 
-Michael Cutler's original design work and documentation are available under the [MIT licence](LICENSE). Vendor PDFs in `datasheets/`, third-party symbols, footprints and models (including embedded library elements), and third-party marks retain their respective owners' terms. The MIT grant does not relicense those materials or imply endorsement by the acknowledged organisations.
+Michael Cutler's original design work and documentation are available under the [MIT licence](LICENSE). Vendor PDFs in `datasheets/`, third-party symbols, footprints and models (including embedded, recovered, and cached library elements), and third-party marks retain their respective owners' terms. KiCad symbols retain [CC BY-SA 4.0 with the KiCad exception](LICENSES/KiCad-Libraries.md). The MIT grant does not relicense those materials or imply endorsement by the acknowledged organisations.

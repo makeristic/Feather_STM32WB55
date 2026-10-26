@@ -591,7 +591,7 @@
     )
   )
 
-  (module FR05S1N0102 (layer F.Cu) (tedit 5F929F3D) (tstamp 5F930B6C)
+  (module Makeristic-KiCad-Library:FR05S1N0102 (layer F.Cu) (tedit 5F929F3D) (tstamp 5F930B6C)
     (at 176.1 97 270)
     (descr FR05-S1-N-0-102-1)
     (tags Antenna)
@@ -636,7 +636,7 @@
       (net 59 ANT_OUT))
     (pad 2 smd rect (at 2.55 0 270) (size 1.5 2.6) (layers F.Cu F.Paste F.Mask)
       (net 58 "Net-(ANT1-Pad2)"))
-    (model FR05-S1-N-0-102.stp
+    (model ${KIPRJMOD}/../Makeristic-KiCad-Library/Makeristic-KiCad-Library.3dshapes/FR05-S1-N-0-102.stp
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -720,7 +720,7 @@
     )
   )
 
-  (module MLPFWB5501E3 (layer F.Cu) (tedit 0) (tstamp 5F89232B)
+  (module Makeristic-KiCad-Library:MLPFWB5501E3 (layer F.Cu) (tedit 0) (tstamp 5F89232B)
     (at 168.825 92.725 270)
     (descr MLPF-WB55-01E3-2)
     (tags Filter)
@@ -759,7 +759,7 @@
       (net 56 GND))
     (pad 6 smd rect (at 0.25 -0.587) (size 0.3 0.3) (layers F.Cu F.Paste F.Mask)
       (net 56 GND))
-    (model MLPF-WB55-01E3.stp
+    (model ${KIPRJMOD}/../Makeristic-KiCad-Library/Makeristic-KiCad-Library.3dshapes/MLPF-WB55-01E3.stp
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1089,7 +1089,7 @@
       (net 35 A1))
     (pad 1 smd rect (at -3.401247 -2.75 90) (size 0.909637 0.242474) (layers F.Cu F.Paste F.Mask)
       (net 57 VDD))
-    (model eec.models/STMicroelectronics_-_STM32WB55CGU6.step
+    (model ${KIPRJMOD}/../Makeristic-KiCad-Library/Makeristic-KiCad-Library.3dshapes/STMicroelectronics_-_STM32WB55CGU6.step
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1509,7 +1509,7 @@
     (tags "Surface mounted pin header SMD 2x05 1.00mm double row")
     (path /5F836AD8)
     (attr smd)
-    (fp_text reference SWD (at 0 3.56) (layer B.SilkS)
+    (fp_text reference J3 (at 0 3.56) (layer B.SilkS)
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_text value Conn_ARM_JTAG_SWD_10 (at 0 -3.56) (layer B.Fab)
@@ -1769,7 +1769,7 @@
     (tags "SOIC SO")
     (path /5FBBF086)
     (attr smd)
-    (fp_text reference FLASH (at 0 3.4) (layer B.SilkS)
+    (fp_text reference U5 (at 0 3.4) (layer B.SilkS)
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_text value "Flash SOIC-8" (at 0 -3.4) (layer B.Fab)
@@ -3279,8 +3279,8 @@
   (via (at 170.9 101) (size 0.45) (drill 0.2) (layers F.Cu B.Cu) (net 56))
   (segment (start 170.6 100.3) (end 170.9 100) (width 0.2) (layer F.Cu) (net 56))
   (segment (start 169.4875 100.3) (end 170.6 100.3) (width 0.2) (layer F.Cu) (net 56))
-  (via (at 164.45 88.65) (size 0.45) (drill 0.2) (layers F.Cu B.Cu) (net 56))
-  (segment (start 164.45 87.6) (end 164.45 88.44799) (width 0.2) (layer F.Cu) (net 56))
+  (via (at 164.45 88.4) (size 0.45) (drill 0.2) (layers F.Cu B.Cu) (net 56))
+  (segment (start 164.45 87.6) (end 164.45 88.4) (width 0.2) (layer F.Cu) (net 56))
   (via (at 153.85 87.9) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 56))
   (segment (start 152.836 87.9) (end 152.816 87.88) (width 0.3) (layer F.Cu) (net 56))
   (segment (start 153.85 87.9) (end 152.836 87.9) (width 0.3) (layer F.Cu) (net 56))
